@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TOTP - Starter Code</title>
+        <link rel="stylesheet" href="<%= assetPath(`/public/application.css`) %>"/>
+
+        <script src="https://unpkg.com/hyperscript.org@0.9.8"></script>
+        <script src="https://unpkg.com/htmx.org@2.0.0"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+     <%= if (toasts) { %>
+      <%= for (toast) in toasts { %>
+        <div class="max-w-max z-10 absolute bg-white p-6 left-1/2 -translate-x-1/2 toast rounded-md ring-4 ring-black/5 shadow-md"><%= toast %></div>
+       <% } %>
+     <% } %>
+      <div class="min-h-full bg-primary flex flex-col">
+        <%= if(currentUser) { %>
+          <header class="shadow-xl p-3 text-right">
+              <form action="/logout" method="post">
+                <button class="text-white w-10 drop-shadow-lg">
+                  <img src="https://cdn-icons-png.flaticon.com/512/10313/10313377.png" alt="">
+                </button>
+              </form>
+          </header>
+        <% } %>
+        <main class="px-4 flex-1 grid place-content-center grid-cols-1">
+          <%= yield %>
+        </main>
+      </div>
+    </body>
+</html>
