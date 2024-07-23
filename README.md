@@ -30,4 +30,4 @@ Now you can use the following command to run the app in dev mode
 kit dev
 ```
 
-And open `http://localhost:3000` in your browser.
+And open `http://localhost:3001` in your browser.
