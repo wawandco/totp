@@ -22,10 +22,24 @@ func AddRoutes(r server.Router) (err error) {
 	))
 
 	r.HandleFunc("GET /login", auth.Index)
-	r.HandleFunc("POST /login", auth.Validate)
+	r.HandleFunc("POST /login", auth.Login)
 	r.HandleFunc("POST /logout", auth.Logout)
+
 	r.Group("/", func(r server.Router) {
-		r.Use(auth.Middleware())
+		r.Use(
+			auth.LoginMiddleware(),
+			auth.CurrentUserMiddleware(),
+		)
+		r.HandleFunc("GET /authenticate", auth.Authenticate)
+		r.HandleFunc("POST /verify", auth.Verify)
+	})
+
+	r.Group("/", func(r server.Router) {
+		r.Use(
+			auth.LoginMiddleware(),
+			auth.AuthenticatorMiddleware(),
+			auth.CurrentUserMiddleware(),
+		)
 		r.HandleFunc("GET /{$}", users.Index)
 		r.HandleFunc("GET /users", users.Index)
 	})

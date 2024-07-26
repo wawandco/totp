@@ -13,5 +13,6 @@ type User struct {
 }
 
 type UsersService interface {
-	Find(string) (User, error)
+	Find(email string) (User, error)
+	SetSecret(email string, secret string) error
 }
