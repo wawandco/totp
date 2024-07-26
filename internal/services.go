@@ -1,8 +1,8 @@
 package internal
 
 import (
-	"facts/internal/users"
 	"fmt"
+	"github.com/dmartinez24/totp/internal/users"
 	"github.com/leapkit/leapkit/core/server"
 )
 

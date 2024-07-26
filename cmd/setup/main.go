@@ -3,11 +3,12 @@ package main
 import (
 	"cmp"
 	"fmt"
+	"github.com/dmartinez24/totp/internal"
+	"github.com/dmartinez24/totp/internal/migrations"
 	"os"
 
 	"github.com/leapkit/leapkit/core/db"
-	"facts/internal"
-	"facts/internal/migrations"
+
 	"github.com/paganotoni/tailo"
 
 	// Load environment variables

@@ -1,9 +1,9 @@
 package internal
 
 import (
-	"facts/internal/auth"
-	"facts/internal/users"
-	"facts/public"
+	"github.com/dmartinez24/totp/internal/auth"
+	"github.com/dmartinez24/totp/internal/users"
+	"github.com/dmartinez24/totp/public"
 	"github.com/leapkit/leapkit/core/assets"
 	"github.com/leapkit/leapkit/core/render"
 	"github.com/leapkit/leapkit/core/server"

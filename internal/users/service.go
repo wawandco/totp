@@ -2,7 +2,7 @@ package users
 
 import (
 	"database/sql"
-	"facts/internal/models"
+	"github.com/dmartinez24/totp/internal/models"
 )
 
 type service struct {

@@ -1,8 +1,8 @@
 package auth
 
 import (
-	"facts/internal/models"
 	"fmt"
+	"github.com/dmartinez24/totp/internal/models"
 	"github.com/leapkit/leapkit/core/render"
 	"github.com/leapkit/leapkit/core/server/session"
 	"golang.org/x/crypto/bcrypt"

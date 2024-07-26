@@ -1,8 +1,8 @@
 package main
 
 import (
-	"facts/internal"
 	"fmt"
+	"github.com/dmartinez24/totp/internal"
 	"net/http"
 
 	// Load environment variables

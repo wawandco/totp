@@ -1,9 +1,9 @@
 package main
 
 import (
-	"facts/internal"
-	"facts/internal/migrations"
 	"fmt"
+	"github.com/dmartinez24/totp/internal"
+	"github.com/dmartinez24/totp/internal/migrations"
 
 	"github.com/leapkit/leapkit/core/db"
 	_ "github.com/mattn/go-sqlite3" // sqlite3 driver
