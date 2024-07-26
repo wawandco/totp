@@ -13,12 +13,12 @@ github.com/gorilla/securecookie v1.1.2 h1:YCIWL56dvtr73r6715mJs5ZvhtnY73hBvEF8kX
 github.com/gorilla/securecookie v1.1.2/go.mod h1:NfCASbcHqRSY+3a8tlWJwsQap2VX5pwzwo4h3eOamfo=
 github.com/gorilla/sessions v1.3.0 h1:XYlkq7KcpOB2ZhHBPv5WpjMIxrQosiZanfoy1HLZFzg=
 github.com/gorilla/sessions v1.3.0/go.mod h1:ePLdVu+jbEgHH+KWw8I1z2wqd0BAdAQh/8LRvBeoNcQ=
-github.com/leapkit/leapkit/core v0.0.4 h1:57wJAAxrPiSO6imUGGwEXycMEAZRlmvVXfd+E5y2PjY=
-github.com/leapkit/leapkit/core v0.0.4/go.mod h1:VWv0QYBILN07ZKhsFO1Utbe21TbdsWbvQ3IDDMnw4GE=
+github.com/leapkit/leapkit/core v0.0.8 h1:JpbHEwAX0clVH4AR8Lv4crPXamn0fDRsxl9bwQagDbI=
+github.com/leapkit/leapkit/core v0.0.8/go.mod h1:plU+UpOkjOnZe1/yo43mwtqoXTFJoF/ILx7pdgXrb6A=
 github.com/mattn/go-sqlite3 v1.14.22 h1:2gZY6PC6kBnID23Tichd1K+Z0oS6nE/XwU+Vz/5o4kU=
 github.com/mattn/go-sqlite3 v1.14.22/go.mod h1:Uh1q+B4BYcTPb+yiD3kU8Ct7aC0hY9fxUwlHK0RXw+Y=
-github.com/paganotoni/tailo v1.0.5 h1:plU9tBUK1vaCRQ8z4BkMNLYqYg3GiyQT8YwwJ5+CYhI=
-github.com/paganotoni/tailo v1.0.5/go.mod h1:EJj1Kec68hmveOWyIZFS6GGqFtIj0goWQtxou6wLx8U=
+github.com/paganotoni/tailo v1.0.8 h1:pVGpyH0mJGjRdE2Y8y/jJbzgtCBXiSfJD83bTRt6Ya8=
+github.com/paganotoni/tailo v1.0.8/go.mod h1:EJj1Kec68hmveOWyIZFS6GGqFtIj0goWQtxou6wLx8U=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/pquerna/otp v1.4.0 h1:wZvl1TIVxKRThZIBiwOOHOGP/1+nZyWBil9Y2XNEDzg=

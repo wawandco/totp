@@ -1,12 +1,12 @@
-module facts
+module github.com/dmartinez24/totp
 
-go 1.22.4
+go 1.22.5
 
 require (
 	github.com/gofrs/uuid/v5 v5.2.0
-	github.com/leapkit/leapkit/core v0.0.4
+	github.com/leapkit/leapkit/core v0.0.8
 	github.com/mattn/go-sqlite3 v1.14.22
-	github.com/paganotoni/tailo v1.0.5
+	github.com/paganotoni/tailo v1.0.8
 	github.com/pquerna/otp v1.4.0
 	golang.org/x/crypto v0.25.0
 )
