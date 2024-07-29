@@ -22,8 +22,7 @@ func Validate(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		slog.Error(fmt.Sprintf("error loading user: %v", err))
-		s.AddFlash("❌ invalid email or password", "toasts")
-		rw.Set("toasts", s.Flashes("toasts"))
+		rw.Set("toast", "❌ invalid email or password")
 		err = rw.Render("auth/login.html")
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -35,8 +34,7 @@ func Validate(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		slog.Error(fmt.Sprintf("error comparing hash and password: %v", err))
-		s.AddFlash("❌ invalid email or password", "toasts")
-		rw.Set("toasts", s.Flashes("toasts"))
+		rw.Set("toast", "❌ invalid email or password")
 		err = rw.Render("auth/login.html")
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)

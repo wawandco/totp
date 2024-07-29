@@ -15,10 +15,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet" />
     </head>
     <body>
-     <%= if (toasts) { %>
-      <%= for (toast) in toasts { %>
+     <%= if (toast) { %>
         <div class="max-w-max z-10 absolute bg-white p-6 left-1/2 -translate-x-1/2 toast rounded-md ring-4 ring-black/5 shadow-md"><%= toast %></div>
-       <% } %>
      <% } %>
       <div class="min-h-full bg-primary flex flex-col">
         <%= if(currentUser) { %>

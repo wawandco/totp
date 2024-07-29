@@ -1066,8 +1066,8 @@ html, body {
 }
 
 .bg-primary {
-  background-image: linear-gradient(
-        var(--angle),
+  background-image: radial-gradient(
+        circle,
         hsl(182deg 91% 40%) 0%,
         hsl(187deg 100% 41%) 13%,
         hsl(193deg 100% 44%) 22%,
