@@ -1,6 +1,6 @@
-<form class="flex flex-col gap-2" action="/verify" method="POST" autocomplete="off">
-  <div class="flex space-x-3 justify-center">
-    <div>
+<form class="flex flex-col gap-8" action="/verify" method="POST" autocomplete="off">
+  <div class="flex md:gap-3  justify-center">
+    <div class="flex-1 max-w-10 flex flex-col">
       <label for="code-1" class="sr-only">First code</label>
       <input
             type="number"
@@ -9,7 +9,7 @@
             max="9"
             id="code-1"
             name="code"
-            class="w-10 h-10 rounded-md border-gray-400 text-center"
+            class="p-2 rounded-l-md border-gray-400 md:rounded-md md:border-r-gray-400 border-r-transparent text-center"
             _="on input
                         if my value.trim().length > 0 and isNaN(my value) == false
                             js document.getElementById('code-2').select()
@@ -18,7 +18,7 @@
             required
       />
     </div>
-    <div>
+    <div class="flex-1 max-w-10 flex flex-col">
       <label for="code-2" class="sr-only">Second code</label>
       <input
             type="number"
@@ -27,7 +27,7 @@
             max="9"
             id="code-2"
             name="code"
-            class="w-10 h-10 rounded-md border-gray-400 text-center"
+            class="p-2 border-gray-400 md:rounded-md md:border-r-gray-400 border-r-transparent text-center"
             _="on keydown
                         if event.key is 'Backspace'
                             js document.getElementById('code-2').value = ''; document.getElementById('code-1').select()
@@ -41,7 +41,7 @@
             required
       />
     </div>
-    <div>
+    <div class="flex-1 max-w-10 flex flex-col">
       <label for="code-3" class="sr-only">Third code</label>
       <input
             type="number"
@@ -50,7 +50,7 @@
             max="9"
             id="code-3"
             name="code"
-            class="w-10 h-10 rounded-md border-gray-400 text-center"
+            class="p-2 border-gray-400 md:rounded-md md:border-r-gray-400 border-r-transparent text-center"
             _="on keydown
                         if event.key is 'Backspace'
                             js document.getElementById('code-3').value = ''; document.getElementById('code-2').select()
@@ -64,7 +64,7 @@
             required
       />
     </div>
-    <div>
+    <div class="flex-1 max-w-10 flex flex-col">
       <label for="code-4" class="sr-only">Fourth code</label>
       <input
             type="number"
@@ -73,7 +73,7 @@
             max="9"
             id="code-4"
             name="code"
-            class="w-10 h-10 rounded-md border-gray-400 text-center"
+            class="p-2 border-gray-400 md:rounded-md md:border-r-gray-400 border-r-transparent text-center"
             _="on keydown
                         if event.key is 'Backspace'
                             js document.getElementById('code-4').value = ''; document.getElementById('code-3').select()
@@ -87,7 +87,7 @@
             required
       />
     </div>
-    <div>
+    <div class="flex-1 max-w-10 flex flex-col">
       <label for="code-5" class="sr-only">Fifth code</label>
       <input
             type="number"
@@ -96,7 +96,7 @@
             max="9"
             id="code-5"
             name="code"
-            class="w-10 h-10 rounded-md border-gray-400 text-center"
+            class="p-2 border-gray-400 md:rounded-md md:border-r-gray-400 border-r-transparent text-center"
             _="on keydown
                         if event.key is 'Backspace'
                             js document.getElementById('code-5').value = ''; document.getElementById('code-4').select()
@@ -110,7 +110,7 @@
             required
       />
     </div>
-    <div>
+    <div class="flex-1 max-w-10 flex flex-col">
       <label for="code-6" class="sr-only">Sixth code</label>
       <input
             type="number"
@@ -119,7 +119,7 @@
             max="9"
             id="code-6"
             name="code"
-            class="w-10 h-10 rounded-md border-gray-400 text-center"
+            class="p-2 rounded-r-md md:rounded-md border-gray-400 text-center"
             _="on keydown
                         if event.key is 'Backspace'
                             js document.getElementById('code-6').value = ''; document.getElementById('code-5').select()
@@ -132,7 +132,7 @@
 
   <div class="flex justify-center">
     <button
-          class="border-2 border-[#008CFFFF] bg-[#2597F3] hover:bg-[#008CFFFF] text-white mt-6 py-2.5 px-10 shadow-md rounded-md w-max mx-auto transition-colors"
+          class="border-2 border-[#008CFFFF] bg-[#2597F3] hover:bg-[#008CFFFF] text-white  py-2.5 px-10 shadow-md rounded-md w-max mx-auto transition-colors"
           type="submit"
     >
       Authenticate
