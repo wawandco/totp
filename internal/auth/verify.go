@@ -1,9 +1,9 @@
 package auth
 
 import (
+	"easytotp/internal/models"
+	"easytotp/internal/totp"
 	"fmt"
-	"github.com/dmartinez24/totp/internal/models"
-	"github.com/dmartinez24/totp/internal/totp"
 	"github.com/leapkit/leapkit/core/render"
 	"github.com/leapkit/leapkit/core/server/session"
 	"log/slog"
@@ -11,12 +11,12 @@ import (
 	"strings"
 )
 
-func Validate(w http.ResponseWriter, r *http.Request) {
+func Verify(w http.ResponseWriter, r *http.Request) {
 	rw := render.FromCtx(r.Context())
 	s := session.FromCtx(r.Context())
 	user := r.Context().Value("currentUser").(models.User)
 	authenticator := r.Context().Value("totp").(totp.Authenticator)
-	
+
 	err := r.ParseForm()
 	if err != nil {
 		slog.Error(fmt.Sprintf("error parsing form: %v", err))
@@ -31,7 +31,7 @@ func Validate(w http.ResponseWriter, r *http.Request) {
 
 	if user.Secret.Valid {
 		secret = user.Secret.String
-		template = "auth/validate.html"
+		template = "auth/verify.html"
 	}
 
 	valid := authenticator.Validate(code, secret)

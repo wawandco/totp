@@ -2,7 +2,7 @@ package auth
 
 import (
 	"context"
-	"github.com/dmartinez24/totp/internal/models"
+	"easytotp/internal/models"
 
 	"fmt"
 	"github.com/leapkit/leapkit/core/render"

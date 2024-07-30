@@ -1,8 +1,8 @@
 package main
 
 import (
+	"easytotp/internal"
 	"fmt"
-	"github.com/dmartinez24/totp/internal"
 	"net/http"
 
 	// Load environment variables

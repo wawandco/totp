@@ -1,9 +1,9 @@
 package auth
 
 import (
+	"easytotp/internal/models"
+	"easytotp/internal/totp"
 	"fmt"
-	"github.com/dmartinez24/totp/internal/models"
-	"github.com/dmartinez24/totp/internal/totp"
 
 	"github.com/leapkit/leapkit/core/render"
 	"github.com/leapkit/leapkit/core/server/session"
@@ -28,7 +28,7 @@ func Authenticate(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	template := "auth/validate.html"
+	template := "auth/verify.html"
 
 	if !user.Secret.Valid {
 		authenticator := r.Context().Value("totp").(totp.Authenticator)

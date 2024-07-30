@@ -1,9 +1,9 @@
 package internal
 
 import (
+	"easytotp/internal/totp"
+	"easytotp/internal/users"
 	"fmt"
-	"github.com/dmartinez24/totp/internal/totp"
-	"github.com/dmartinez24/totp/internal/users"
 	"github.com/leapkit/leapkit/core/server"
 )
 

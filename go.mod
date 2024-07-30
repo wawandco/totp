@@ -1,4 +1,4 @@
-module github.com/dmartinez24/totp
+module easytotp
 
 go 1.22.5
 

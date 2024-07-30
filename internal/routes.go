@@ -1,9 +1,9 @@
 package internal
 
 import (
-	"github.com/dmartinez24/totp/internal/auth"
-	"github.com/dmartinez24/totp/internal/users"
-	"github.com/dmartinez24/totp/public"
+	"easytotp/internal/auth"
+	"easytotp/internal/users"
+	"easytotp/public"
 	"github.com/leapkit/leapkit/core/assets"
 	"github.com/leapkit/leapkit/core/render"
 	"github.com/leapkit/leapkit/core/server"
@@ -31,7 +31,7 @@ func AddRoutes(r server.Router) (err error) {
 			auth.CurrentUserMiddleware(),
 		)
 		r.HandleFunc("GET /authenticate", auth.Authenticate)
-		r.HandleFunc("POST /validate", auth.Validate)
+		r.HandleFunc("POST /verify", auth.Verify)
 	})
 
 	r.Group("/", func(r server.Router) {

@@ -2,9 +2,9 @@ package main
 
 import (
 	"cmp"
+	"easytotp/internal"
+	"easytotp/internal/migrations"
 	"fmt"
-	"github.com/dmartinez24/totp/internal"
-	"github.com/dmartinez24/totp/internal/migrations"
 	"os"
 
 	"github.com/leapkit/leapkit/core/db"
