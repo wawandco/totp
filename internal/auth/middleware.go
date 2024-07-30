@@ -91,6 +91,10 @@ func CurrentUserMiddleware() func(http.Handler) http.Handler {
 					http.Error(w, err.Error(), http.StatusInternalServerError)
 					return
 				}
+
+				slog.Info("<---- CURRENT USER MW")
+				next.ServeHTTP(w, r)
+				return
 			}
 
 			ctx := context.WithValue(r.Context(), "currentUser", user)

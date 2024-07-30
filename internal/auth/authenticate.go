@@ -3,6 +3,8 @@ package auth
 import (
 	"fmt"
 	"github.com/dmartinez24/totp/internal/models"
+	"github.com/dmartinez24/totp/internal/totp"
+
 	"github.com/leapkit/leapkit/core/render"
 	"github.com/leapkit/leapkit/core/server/session"
 	"log/slog"
@@ -26,22 +28,31 @@ func Authenticate(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	template := "auth/verify.html"
-	totpInfo, err := TOTPInfo(user.Secret.String, user.Email)
-
-	if err != nil {
-		slog.Error(fmt.Sprintf("error generating authenticator: %v", err))
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
+	template := "auth/validate.html"
 
 	if !user.Secret.Valid {
+		authenticator := r.Context().Value("totp").(totp.Authenticator)
+
+		secret, err := authenticator.GenerateSecretKey(user.Email)
+		if err != nil {
+			slog.Error(fmt.Sprintf("error generating key: %v", err))
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+
+		qr, err := authenticator.GenerateQR()
+		if err != nil {
+			slog.Error(fmt.Sprintf("error generating qr: %v", err))
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+
 		template = "auth/setup.html"
-		rw.Set("secret", totpInfo.Secret)
-		rw.Set("qr", totpInfo.QR)
+		rw.Set("secret", secret)
+		rw.Set("qr", qr)
 	}
 
-	err = rw.Render(template)
+	err := rw.Render(template)
 	if err != nil {
 		slog.Error(fmt.Sprintf("error rendering template: %v", err))
 		http.Error(w, err.Error(), http.StatusInternalServerError)

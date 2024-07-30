@@ -2,6 +2,7 @@ package internal
 
 import (
 	"fmt"
+	"github.com/dmartinez24/totp/internal/totp"
 	"github.com/dmartinez24/totp/internal/users"
 	"github.com/leapkit/leapkit/core/server"
 )
@@ -16,6 +17,7 @@ func AddServices(r server.Router) error {
 
 	// Services that will be injected in the context
 	r.Use(server.InCtxMiddleware("users", users.NewService(db)))
+	r.Use(server.InCtxMiddleware("totp", totp.NewService()))
 
 	return nil
 }

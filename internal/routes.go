@@ -31,7 +31,7 @@ func AddRoutes(r server.Router) (err error) {
 			auth.CurrentUserMiddleware(),
 		)
 		r.HandleFunc("GET /authenticate", auth.Authenticate)
-		r.HandleFunc("POST /verify", auth.Verify)
+		r.HandleFunc("POST /validate", auth.Validate)
 	})
 
 	r.Group("/", func(r server.Router) {
