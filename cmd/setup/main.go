@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
+	"easytotp/internal"
+	"easytotp/internal/migrations"
 	"github.com/leapkit/leapkit/core/db"
-	"facts/internal"
-	"facts/internal/migrations"
 	"github.com/paganotoni/tailo"
 
 	// Load environment variables

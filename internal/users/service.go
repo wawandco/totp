@@ -2,7 +2,7 @@ package users
 
 import (
 	"database/sql"
-	"facts/internal/models"
+	"easytotp/internal/models"
 )
 
 type service struct {

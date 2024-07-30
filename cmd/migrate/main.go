@@ -1,8 +1,8 @@
 package main
 
 import (
-	"facts/internal"
-	"facts/internal/migrations"
+	"easytotp/internal"
+	"easytotp/internal/migrations"
 	"fmt"
 
 	"github.com/leapkit/leapkit/core/db"

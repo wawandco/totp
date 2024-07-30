@@ -1,12 +1,9 @@
 package main
 
 import (
+	"easytotp/internal"
 	"fmt"
-	"log/slog"
 	"net/http"
-	"os"
-
-	"facts/internal"
 
 	// Load environment variables
 	_ "github.com/leapkit/leapkit/core/tools/envload"
@@ -15,8 +12,6 @@ import (
 )
 
 func main() {
-	slog.SetDefault(slog.New(slog.NewJSONHandler(os.Stdout, nil)))
-
 	s := internal.New()
 
 	fmt.Println("Server started at", s.Addr())

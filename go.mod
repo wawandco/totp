@@ -1,10 +1,10 @@
-module facts
+module easytotp
 
 go 1.22.4
 
 require (
 	github.com/gofrs/uuid/v5 v5.2.0
-	github.com/leapkit/leapkit/core v0.0.4
+	github.com/leapkit/leapkit/core v0.0.10
 	github.com/mattn/go-sqlite3 v1.14.22
 	github.com/paganotoni/tailo v1.0.5
 	golang.org/x/crypto v0.25.0

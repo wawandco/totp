@@ -1,9 +1,9 @@
 package internal
 
 import (
-	"facts/internal/auth"
-	"facts/internal/users"
-	"facts/public"
+	"easytotp/internal/auth"
+	"easytotp/internal/users"
+	"easytotp/public"
 	"github.com/leapkit/leapkit/core/assets"
 	"github.com/leapkit/leapkit/core/render"
 	"github.com/leapkit/leapkit/core/server"
@@ -22,7 +22,7 @@ func AddRoutes(r server.Router) (err error) {
 	))
 
 	r.HandleFunc("GET /login", auth.Index)
-	r.HandleFunc("POST /login", auth.Validate)
+	r.HandleFunc("POST /login", auth.Login)
 	r.HandleFunc("POST /logout", auth.Logout)
 	r.Group("/", func(r server.Router) {
 		r.Use(auth.Middleware())

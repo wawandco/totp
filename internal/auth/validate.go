@@ -1,7 +1,7 @@
 package auth
 
 import (
-	"facts/internal/models"
+	"easytotp/internal/models"
 	"fmt"
 	"github.com/leapkit/leapkit/core/render"
 	"github.com/leapkit/leapkit/core/server/session"
@@ -10,7 +10,7 @@ import (
 	"net/http"
 )
 
-func Validate(w http.ResponseWriter, r *http.Request) {
+func Login(w http.ResponseWriter, r *http.Request) {
 	s := session.FromCtx(r.Context())
 	usersService := r.Context().Value("users").(models.UsersService)
 	rw := render.FromCtx(r.Context())

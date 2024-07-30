@@ -1,7 +1,7 @@
 package internal
 
 import (
-	"facts/internal/users"
+	"easytotp/internal/users"
 	"fmt"
 	"github.com/leapkit/leapkit/core/server"
 )

@@ -1,7 +1,7 @@
 package auth
 
 import (
-	"facts/internal/models"
+	"easytotp/internal/models"
 	"github.com/leapkit/leapkit/core/render"
 	"github.com/leapkit/leapkit/core/server/session"
 	"net/http"
